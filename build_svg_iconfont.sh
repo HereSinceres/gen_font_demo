@@ -6,6 +6,7 @@ set -e
 # 使用命令行参数传递目录路径
 # DIR=$1
 DIR=lib/style/font-icon
+FONT_PREFIX=your_name_font_icon
 
 if [ -d "$DIR" ]; then
   echo "Directory $DIR exists."
@@ -15,7 +16,7 @@ else
   echo "Directory $DIR created."
 fi
 
-npx fantasticon svg-font -o $DIR   -p sicon  --normalize
+npx fantasticon svg-font -o $DIR   -p $FONT_PREFIX  --normalize
 
 # $DIR/icons.css
 #proto replace
@@ -27,5 +28,5 @@ cssReplace(){
     fi
 }
 
-cssReplace "s/i\[class/i\.sicon\,i\[class/" $DIR/icons.css
+cssReplace "s/i\[class/i\.$FONT_PREFIX\,i\[class/" $DIR/icons.css
  

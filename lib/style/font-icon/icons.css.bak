@@ -5,7 +5,7 @@ url("./icons.woff2?59759235f17aaa51b46295895aacb1f0") format("woff2"),
 url("./icons.woff?59759235f17aaa51b46295895aacb1f0") format("woff");
 }
 
-i[class^="sicon-"]:before, i[class*=" sicon-"]:before {
+i[class^="your_name_font_icon-"]:before, i[class*=" your_name_font_icon-"]:before {
     font-family: icons !important;
     font-style: normal;
     font-weight: normal !important;
@@ -16,18 +16,18 @@ i[class^="sicon-"]:before, i[class*=" sicon-"]:before {
     -moz-osx-font-smoothing: grayscale;
 }
 
-.sicon-translate:before {
+.your_name_font_icon-translate:before {
     content: "\f101";
 }
-.sicon-shopping-bag:before {
+.your_name_font_icon-shopping-bag:before {
     content: "\f102";
 }
-.sicon-person:before {
+.your_name_font_icon-person:before {
     content: "\f103";
 }
-.sicon-location-marker:before {
+.your_name_font_icon-location-marker:before {
     content: "\f104";
 }
-.sicon-information-circle:before {
+.your_name_font_icon-information-circle:before {
     content: "\f105";
 }
