@@ -1,0 +1,39 @@
+@font-face {
+    font-family: "icons";
+    src        : url("./icons.eot?59759235f17aaa51b46295895aacb1f0#iefix") format("embedded-opentype"),
+        url("./icons.woff2?59759235f17aaa51b46295895aacb1f0") format("woff2"),
+        url("./icons.woff?59759235f17aaa51b46295895aacb1f0") format("woff");
+}
+
+i.sicon,
+i[class^="sicon-"]:before,
+i[class*=" sicon-"]:before {
+    line-height            : 1;
+    text-transform         : none;
+    font-family            : icons !important;
+    font-style             : normal;
+    font-variant           : normal;
+    font-weight            : normal !important;
+    -webkit-font-smoothing : antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.sicon-translate:before {
+    content: "\f101";
+}
+
+.sicon-shopping-bag:before {
+    content: "\f102";
+}
+
+.sicon-person:before {
+    content: "\f103";
+}
+
+.sicon-location-marker:before {
+    content: "\f104";
+}
+
+.sicon-information-circle:before {
+    content: "\f105";
+}
