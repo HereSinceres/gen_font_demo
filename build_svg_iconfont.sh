@@ -1,24 +1,11 @@
 #! /bin/sh
-set -x
+# set -x
 # 脚本出错时退出
-set -e
+# set -e
 
-# 使用命令行参数传递目录路径
-# DIR=$1
-DIR=lib/style/font-icon
-FONT_PREFIX=your_name_font_icon
+npx fantasticon svg-font -o lib/style/font-icon   -p sicon  --normalize
 
-if [ -d "$DIR" ]; then
-  echo "Directory $DIR exists."
-else
-  echo "Creating directory $DIR..."
-  mkdir -p $DIR
-  echo "Directory $DIR created."
-fi
-
-npx fantasticon svg-font -o $DIR   -p $FONT_PREFIX  --normalize
-
-# $DIR/icons.css
+# lib/style/font-icon/icons.css
 #proto replace
 cssReplace(){
     if [ $(uname -s) = Darwin ]; then
@@ -28,5 +15,6 @@ cssReplace(){
     fi
 }
 
-cssReplace "s/i\[class/i\.$FONT_PREFIX\,i\[class/" $DIR/icons.css
+cssReplace "s/i\[class/i\.sicon\,i\[class/" lib/style/font-icon/icons.css
+cssReplace "s/line-height\:[[:space:]]*1;//" lib/style/font-icon/icons.css
  
